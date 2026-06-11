@@ -11,13 +11,13 @@ public class Circle implements Figure {
         this.fillColor = fillColor;
         this.borderColor = borderColor;
     }
-    // Считаем периметр круга: 2 * π * радиус.
+    // Считаем периметр круга: 2 * 3,14 * радиус.
     @Override
     public double getPerimeter() {
         return 2 * Math.PI * radius;
     }
 
-    // Считаем площадь круга: π * радиус * радиус.
+    // Считаем площадь круга: 3,14 * радиус * радиус.
     @Override
     public double getArea() {
         return Math.PI * radius * radius;
