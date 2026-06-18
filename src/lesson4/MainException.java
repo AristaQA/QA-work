@@ -30,7 +30,7 @@ public class MainException {
             int[] numbers = {1, 2, 3};
 
             // Ошибка: в массиве есть индексы 0, 1, 2
-            // А мы специально обращаемся к индексу 5
+            // А мы специально обращаемся к индексу 7
             System.out.println(numbers[7]);
 
         } catch (ArrayIndexOutOfBoundsException e) {
