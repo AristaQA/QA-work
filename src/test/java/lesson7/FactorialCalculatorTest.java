@@ -1,13 +1,11 @@
 package lesson7;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class FactorialCalculatorTest {
 
-    @Test
-    @DisplayName("Проверка факториала числа 5")
+    @Test(description = "Проверка факториала числа 5")
     public void calculateFactorialOfFiveTest() {
         // Создаём объект класса, который будем тестировать
         FactorialCalculator calculator = new FactorialCalculator();
@@ -19,6 +17,6 @@ public class FactorialCalculatorTest {
         int expectedResult = 120;
 
         // Сравниваем ожидаемый и фактический результат
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(expectedResult, actualResult);
     }
 }

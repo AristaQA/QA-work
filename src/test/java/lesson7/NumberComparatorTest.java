@@ -1,13 +1,11 @@
 package lesson7;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class NumberComparatorTest {
 
-    @Test
-    @DisplayName("Проверка, что первое число больше второго")
+    @Test(description = "Проверка, что первое число больше второго")
     public void firstNumberGreaterTest() {
         // Создаём объект класса, который будем тестировать
         NumberComparator comparator = new NumberComparator();
@@ -18,12 +16,11 @@ public class NumberComparatorTest {
         // Ожидаемый результат
         String expectedResult = "Первое число больше";
 
-        // Сравниваем ожидаемый и фактический результат
-        Assertions.assertEquals(expectedResult, actualResult);
+        // Сравниваем фактический и ожидаемый результат
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
-    @Test
-    @DisplayName("Проверка, что второе число больше первого")
+    @Test(description = "Проверка, что второе число больше первого")
     public void secondNumberGreaterTest() {
         NumberComparator comparator = new NumberComparator();
 
@@ -31,11 +28,10 @@ public class NumberComparatorTest {
 
         String expectedResult = "Второе число больше";
 
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
-    @Test
-    @DisplayName("Проверка, что числа равны")
+    @Test(description = "Проверка, что числа равны")
     public void numbersAreEqualTest() {
         NumberComparator comparator = new NumberComparator();
 
@@ -43,6 +39,6 @@ public class NumberComparatorTest {
 
         String expectedResult = "Числа равны";
 
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }

@@ -1,13 +1,11 @@
 package lesson7;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class TriangleAreaCalculatorTest {
 
-    @Test
-    @DisplayName("Проверка площади треугольника")
+    @Test(description = "Проверка площади треугольника")
     public void calculateTriangleAreaTest() {
         // Создаём объект класса, который будем тестировать
         TriangleAreaCalculator calculator = new TriangleAreaCalculator();
@@ -18,7 +16,7 @@ public class TriangleAreaCalculatorTest {
         // Ожидаемый результат: 10 * 6 / 2 = 30
         double expectedResult = 30;
 
-        // Сравниваем ожидаемый и фактический результат
-        Assertions.assertEquals(expectedResult, actualResult);
+        // Сравниваем фактический и ожидаемый результат
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }

@@ -1,13 +1,11 @@
 package lesson7;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.testng.Assert;
+import org.testng.annotations.Test;
 
 public class CalculatorTest {
 
-    @Test
-    @DisplayName("Проверка сложения двух чисел")
+    @Test(description = "Проверка сложения двух чисел")
     public void addTwoNumbersTest() {
         // Создаём объект калькулятора
         Calculator calculator = new Calculator();
@@ -18,12 +16,11 @@ public class CalculatorTest {
         // Ожидаемый результат: 5 + 3 = 8
         int expectedResult = 8;
 
-        // Проверяем, что результат правильный
-        Assertions.assertEquals(expectedResult, actualResult);
+        // Сравниваем фактический и ожидаемый результат
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
-    @Test
-    @DisplayName("Проверка вычитания двух чисел")
+    @Test(description = "Проверка вычитания двух чисел")
     public void subtractTwoNumbersTest() {
         Calculator calculator = new Calculator();
 
@@ -31,11 +28,10 @@ public class CalculatorTest {
 
         int expectedResult = 6;
 
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
-    @Test
-    @DisplayName("Проверка умножения двух чисел")
+    @Test(description = "Проверка умножения двух чисел")
     public void multiplyTwoNumbersTest() {
         Calculator calculator = new Calculator();
 
@@ -43,11 +39,10 @@ public class CalculatorTest {
 
         int expectedResult = 42;
 
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 
-    @Test
-    @DisplayName("Проверка деления двух чисел")
+    @Test(description = "Проверка деления двух чисел")
     public void divideTwoNumbersTest() {
         Calculator calculator = new Calculator();
 
@@ -55,6 +50,6 @@ public class CalculatorTest {
 
         int expectedResult = 4;
 
-        Assertions.assertEquals(expectedResult, actualResult);
+        Assert.assertEquals(actualResult, expectedResult);
     }
 }
